@@ -1,0 +1,282 @@
+//TITLES DE CADA SECTION
+.headertitle {
+	$self : &;
+	@extend %boxFull;
+	    margin: 0 0 60px;
+		position: relative;
+	    z-index: 999999;
+	@include m('2'){
+			margin: 0;
+		
+			
+	}
+	@include m('3'){
+			margin: 0;
+			display: none;
+			float: right$i;
+			@include respond-to(md){
+				display: block;
+			}
+			
+	}
+	@include e('border'){
+		@include befores($brColor: $white, $isCenter: true);
+		    border-color: $blue2;
+		    border-style: solid;
+		    border-width: 0 4px 4px 4px;
+		    display: block;
+		    margin: 0 auto 30px;
+		    min-height: 94px;
+		    position: relative;
+		    top: 0;
+			max-width: 232px;
+			padding: 30px;
+
+			@include m('white'){
+				@include befores($brColor: $blue2, $isCenter: true);
+				
+					border-color: $white;
+				    border-style: solid;
+				    border-width: 0 4px 4px 4px;
+				    display: block;
+				    margin: 0 auto 30px;
+				    min-height: 94px;
+				    position: relative;
+				    top: 0;
+					max-width: 232px;
+			}
+			@include m('white-home'){
+				@include befores($brColor: $blue2, $isCenter: true);
+				
+					border-color: $white;
+				    border-style: solid;
+				    border-width: 0 4px 4px 4px;
+				    display: block;
+				    margin: 0 auto 30px;
+				    min-height: 94px;
+				    position: relative;
+				    top: -15px;
+					max-width: 232px;
+			}
+
+			@include m('2'){
+				margin: 0$i;
+				border: 0$i;
+				@include respond-to(md){
+					border-left: 4px solid $white$i;
+				}
+			}
+			@include m('3'){
+				@include span(1);
+					
+
+				@include respond-to(md){
+					height: 160px$i;
+					max-width:90px$i;
+				}
+			}
+
+
+	}
+
+
+	@include e('title'){
+		@extend %boxFull;
+			@include fonts(700, 40);
+				color: $black;
+				font-size: 30px;
+				line-height: 1;
+				margin: 0;
+				text-align: center;
+				text-transform: uppercase;
+				position: relative;
+    			top: -38px;
+    			left: -1px;
+
+
+			@include m('white'){
+				color: $white;
+			}
+
+			@include m('2'){
+				@include span(1);
+					float: right;
+					margin: 37px 0 0;
+
+					@include respond-to(md){
+						@include span(.7);
+						margin: 78px 0 0 20px;
+					}
+
+
+			}
+			@include m('right'){
+				@include span(.7);
+					float: right;
+					margin: 78px 0 0;
+
+			}
+
+    }
+
+
+    @include e('subtitle'){
+    	@extend %boxFull;
+    		@include fonts(400,16);
+    			@include afters($brColor: $blue2, $isCenter: true);
+			    	color: $black;
+			    	letter-spacing: 2px;
+			    	margin: 0;
+			    	text-align: center;
+				@include m('white'){
+					@include afters($brColor: $white, $isCenter: true);
+						color: $white;
+				}
+				@include m('2'){
+					@include span(.5);
+						display: none;
+						@include respond-to(md){
+					    	@include afters($brColor: $white);
+							float: right;
+							margin: 61px 0 0;
+							padding-left: 30px;
+							display: block;
+					}
+				}
+
+				@include m('left'){
+					@include span(.5);
+					float: left;
+					margin: 78px 0 0;
+					padding-right: 30px;
+					padding-left: 0;
+					text-align: right;
+
+					&:after{
+						display: none;
+					}
+				}
+				
+			}
+
+ 
+    @include e('group'){
+		@include span(.18);
+			text-align: center;
+
+
+		@include respond-to(md){
+    		text-align: left;
+    	}
+    		color: $blue2;
+		
+    	@include respond-to(md){
+    		@include span(.51);
+    	}
+
+    	@include m('2'){
+			@include span(.36);    	
+				text-align: center;	
+    	}
+    }
+	
+	@include m('2'){
+		@include e('border', $self){
+			@include beforestwo($brColor: $white, $isRight: true);
+			border: 0;
+			@include respond-to(md){
+				border-right: 4px solid $blue2;
+				height: 119px;
+			}
+			border-right: 0;
+			padding: 0;
+			height: 60px;
+			display: inline-block;
+			margin-bottom: 0;
+			margin-left: 0;
+			max-width: 100%;
+			@include respond-to(md){
+				height: 150px;
+				margin-left: 25%;
+				max-width: 120px;
+			}
+
+		}
+	}
+
+	@include m('3'){
+		@include e('border', $self){
+			@include beforestree( $Width: 232px, $brColor: #eaeaea, $isRight: false);
+		}	
+	}
+}
+
+.scrollOn{
+	background: $white;
+	color: $blue2;
+    z-index: 999999999999999;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+	height: 100px;
+	transition: all 0.5s;
+
+	.header__brand{
+		bottom: -38px$i;
+	}
+	@include respond-to(md){
+		.header__brand{
+			bottom: -27px$i;
+		}
+	}
+	.header__logo{
+		color: $blue2;
+		border: 3px solid $blue2;
+	}
+	.header__name{
+		color: $blue2;
+	}
+	.header__menu{
+		transform: translateY(-55%) translateX(-50%);
+	}
+	@include respond-to(md){
+		.header__menu ul{
+			padding: 8% 0 6%;
+    		margin: 0;
+		}
+	}
+	.header__menu ul a{
+		color: $blue2$i;
+		height: 100px;
+	}
+	.header__redes{
+		top: 26px;
+	}
+	.header__redes i{
+		background: $blue2;
+		color: $white;
+	}
+	.header__toggle{
+		margin: 20px 3px;
+		background: $blue2;
+		
+		span{
+			
+			
+			&:before{
+				background: $white;
+			}
+			&:after{
+				background: $white;
+			}
+		}
+
+	}
+	.on + .header__menu{ 
+        display:block; opacity: 1; position: absolute$i; top: 357px$i; left: 340px$i; visibility:visible; background: hsl(0, 0%, 100%);  width:100%; height:auto; z-index: 1;  
+      }
+
+}
+.scrollOff{
+	background: transparent;
+	transition: all 0.5s;
+}
+

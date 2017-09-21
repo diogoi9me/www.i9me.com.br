@@ -1,0 +1,48 @@
+.btn{
+		
+    right: 0px!important;
+	top: 0px!important;
+		
+	}
+.form__btn--interno{
+	position: relative!important;
+	display: block!important;
+}
+
+.atendimento__form .form input:focus, .atendimento__form .form select:focus, .atendimento__form .form textarea:focus{
+	border: 0!important;
+}
+
+.atendimento__form{
+	height: auto!important;
+}
+
+.servico-interna{
+	position: relative!important;
+    bottom: 0!important;
+}
+.servicos__sombraphone--interna{
+	    top: 190px!important;
+}
+.servicos__phoneparallax--interna{
+	    top: 35%!important;
+}
+.servicos__sombralapis--interna{
+	top: 10%!important;
+	margin-top: -17px!important;
+}
+.servicos__lapisparallax--interna{
+	top: 27%!important;
+}
+.servicos--interna{
+	margin-top: 0!important;
+}
+.newsletter{
+	position: relative!important;
+}
+.servicos__lista--interna{
+	margin: 45px 0px 75px!important;
+}
+.groupboxes__vermais--servicosinterna{
+	    width: 64%!important;
+}

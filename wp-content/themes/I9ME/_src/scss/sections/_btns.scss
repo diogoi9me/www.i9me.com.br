@@ -1,0 +1,19 @@
+.btn-green{
+	@include btn-c();
+}
+.btn-blue{
+	@extend %boxFull;
+		background-color: #173e77$i;
+		color: #fff$i;
+		height: 46px; 
+		max-width: 100%;
+		border: 0px;
+		border-radius: 0px;
+		vertical-align: middle;
+		float: right;
+	@include respond-to(md){
+		width: 107px;
+		margin: 7px 0;
+	}
+	
+}

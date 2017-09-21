@@ -1,0 +1,88 @@
+.newsletter{
+	@extend %boxFull;
+	  background-color: $blue9;
+      padding: 60px 0;
+	
+	@include e('info'){
+		@include span(1);
+
+		@include respond-to(sm){
+			@include span(.30);
+
+		}
+	}
+	@include e('form'){
+		@include span(1);
+
+		@include respond-to(sm){
+			@include span(.45);
+			
+		}
+		
+			form{
+				@include span(1);
+
+				input{
+					@include span(.8);
+					border: 0;
+					height: 51px;
+					padding: 15px;
+				}
+
+				
+			}
+		button{
+					@include span(.2);
+					border: 0;
+					border-radius: 0;
+					background-color: #4080ff;
+					color: $white;
+					text-align: center;
+				}
+	}
+	@include e('redes'){
+		@include span(1);
+			margin: 60px 0 0;
+			text-align: center;
+			float: right;
+			ul{
+				text-align: right;
+				margin: 0;
+				li{
+					display: inline-block$i;
+				}
+			}
+
+			i{
+				background-color: $white;
+			    border-radius: 20px;
+			    color: $blue9;
+			    font-size: 20px;
+			    height: 34px;
+			    margin-right: 5px;
+			    padding: 7px 0px;
+			    text-align: center;
+			    width: 34px;
+			}
+		@include respond-to(sm){
+			@include span(.2);
+				margin-left: 18px;
+				margin-top: 8px;
+			
+		}
+	}
+	@include e('title'){
+		@include fonts(600,22);
+		color: $white;
+		letter-spacing: 3px;
+		margin: 0;
+
+	}
+	@include e('subtitle'){
+		@include fonts(500,13);
+		color: $white;
+		letter-spacing: 2px
+	}
+	@include e(''){}
+	
+}

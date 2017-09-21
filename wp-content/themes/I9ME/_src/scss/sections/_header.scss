@@ -1,0 +1,268 @@
+//HEADER
+.header{
+  $self : &;
+
+  @extend %boxFull;
+    @include span(1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      height: 130px;
+      margin-bottom: -15px;
+      position: fixed;
+      z-index: 9999999;
+
+
+  @include e('brand'){
+    @include span(.57);
+      position: relative;
+      bottom: -54px;
+
+      
+
+      @include respond-to(md){
+        @include span(.12);
+          margin-right: 0%;
+          bottom: -39px;
+        }
+        @include respond-to(lg){
+          @include span(.22);
+        }
+  }
+
+  @include e('logo'){
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: auto;
+      border: 3px solid #FFFFFF;
+      padding: 2px 0 2px 4px;
+      text-align: center;
+      line-height: 21px;
+      font-size: 21px;
+      margin: 0;
+      font-weight: bold;
+      color: #fff;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  @include e('letter'){
+    @include span(.5);
+      @include fonts(600,23);
+        line-height: 1;
+    
+    @include m('n'){
+      position: relative;
+      right: -13px;
+    }
+  }
+
+  @include e('name'){
+      color: #fff;
+      position: relative;
+      left: 66px;
+    @include respond-to(sm){
+      @include span(.4);
+
+    }
+  }
+
+
+
+
+ //MENU
+  @include e('menu'){ 
+    @include respond-to(md){
+      display: inline-block;
+      width: auto;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-54%) translateX(-50%);
+      position: absolute;
+      float: left!important;
+      //position: relative;
+      //left: 0;
+      //top: 0;
+      //float: inherit$i;
+      box-shadow: none$i;
+    }
+    @include span(1);
+    display: none;
+    float: right$i;
+    height: 112px; 
+    margin-right: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+     ul{
+        @include respond-to(md){
+          width: auto;
+          margin: 53px auto;
+          float: right$i;
+        }
+        @include span(1);
+        margin:0;
+
+      li{
+        @include span(1);
+        @include respond-to(md){
+          width: auto;
+          padding: 0 34px 0 0;
+           &:hover{
+            background: transparent$i;
+           }
+        }
+          text-align: center;
+          padding: 20px 0;
+
+          &:hover {
+              //background: rgba(17, 14, 86, 0.9);
+          
+          }
+      }
+      a{
+        color: $blue2$i;
+        @include respond-to(md){
+          @include fonts(600,16);
+          color: $white$i;
+        }
+        @include fonts(600,30);
+          color: $white;
+          text-transform: uppercase;
+      }
+    }
+
+  }
+
+
+
+  //MENU-TOGGLE
+  @include e('toggle'){
+  //on activation 
+    float: right;
+    width: 60px;
+    height: 60px;
+    margin: 34px 3px;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    padding: 14px;
+
+      .toggle{ 
+        background-color: transparent; 
+        width:53px; 
+        height: 17px; 
+        margin:5px 11px;    
+        padding: 24px 13px 24px;
+        border-radius: 7px; position:relative; z-index:999; 
+      } 
+      &.on span{ 
+        background-color: transparent;
+      }
+      &.on{ 
+        background-color:#fff; 
+      }
+      &.on span{
+        
+        &:before{ 
+          transform: rotate(45deg) translate(9px, 9px); 
+          background-color: #003793; 
+        }
+
+      }
+      &.on span{
+        
+        &:after{ 
+        transform: rotate(-45deg) translate(7px, -8px); 
+        background-color: #003793;
+        }
+
+      }
+      &.on + .header__menu{ 
+        display:block; opacity: 1; visibility:visible; background: hsl(0, 0%, 100%);  width:100%; height:auto; z-index: 1;  
+      }
+
+       span {
+            position: relative; 
+            display: block; 
+            left: -1px; 
+            top: 10px;
+            height: 6px; 
+            background-color: #fff; 
+
+              &:after, 
+              &:before {
+                content: ""; 
+                position: absolute; 
+                left: 0; 
+                top:-12px; 
+                width: 31px; 
+                height: 6px; 
+                background-color: #fff; 
+                border-radius: 1px; 
+                transition: all 0.3s; backface-visibility:hidden; 
+              }
+
+              &:after{ 
+                top:12px;
+                }
+          }
+   @include respond-to(md){
+    display: none;
+   }
+
+  }
+
+
+
+
+
+  //REDES SOCIAIS
+  @include e('redes'){
+    @include span(.2);
+      display: none;
+    @include respond-to(sm){
+        display: block;
+        width: 9%;
+        margin:  0;
+        padding:  0;
+        text-align: center;
+        position: absolute;
+        top: 37px;
+        right: 110px;
+      }
+      @include respond-to(md){
+        right: 17px;
+      }
+      i{
+        background: $white;
+        border-radius: 18px;
+        color: #003ba5;
+        font-size: 15px;
+        height: 24px;
+        padding: 5px 4px;
+        width: 25px;
+      }
+    }
+
+
+  @include e('redestop'){
+      width: 100%;
+      margin-bottom: 3px;
+
+  }
+  @include e('redesbottom'){
+      width: 100%;
+
+
+  }
+  
+
+
+
+}
+
+
+
+
+

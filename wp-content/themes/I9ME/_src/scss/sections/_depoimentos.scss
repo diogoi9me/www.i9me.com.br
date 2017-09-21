@@ -1,0 +1,87 @@
+.depoimentos{
+	@extend %boxFull;
+		position: relative;
+		
+
+
+		@include e('carousel'){
+			@include span(1);
+			display: inline-block;
+			margin: 60px 0;
+			overflow: hidden;
+		}
+		@include e('boxleft'){
+			@include span(1);
+				text-align: center;
+
+
+			img{
+					width: auto$i;
+					display: inline-block$i;
+				}
+
+			@include respond-to(sm){
+				@include span(.25);
+				background: #fff;
+				display: inline-block;
+				text-align: center;
+			}
+		}
+		@include e('item'){
+			@include span(1);
+			display: inline-block;
+			padding: 30px 0;
+		}
+		@include e('title'){
+			margin: 0;
+			display: block;
+
+			span{
+				@include fonts(300, 16);
+			}
+		}
+		.owl-dots .owl-dot.active{
+			background-color: $blue2;
+		}
+		@include e('subtitulo'){
+			@include fonts(300, 16);
+			display: block;
+			color: $blue2;
+		}
+		@include e('info'){
+			margin: 0;
+		}
+		@include e('boxright'){
+
+			@include span(1);
+
+			@include respond-to(sm){
+				@include span(.25);
+					display: inline-block;
+					position: relative;
+
+				&:after {
+					content: '';
+					background: url(../images/aspas.png)no-repeat;
+					width: 36px;
+					height: 36px;
+					position: absolute;
+    				top: -20px;
+    				left: 119px;
+					display: block;
+				}
+			}
+
+		}
+		@include e('hidden'){
+			display: none$i;
+
+			@include respond-to(sm){
+				display: block;
+			}
+		}
+		@include e('boxright'){
+			border: 1px solid #aaa;
+			padding: 30px;
+		}
+}

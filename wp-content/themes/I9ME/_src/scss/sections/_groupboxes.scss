@@ -1,0 +1,121 @@
+.groupboxes{
+	 $self : &;
+	 @extend %boxFull;
+	 	position: relative;
+		background: #fff;
+		list-style: none;
+
+		@include respond-to(sm){
+			margin: 0 0 60px;
+			padding: 0 90px$i;
+		}
+
+	 @include e('boxitem'){
+		@include span(1);
+			position: relative;
+			@include respond-to(sm){
+				display: inline-block;
+				width: 49.99%$i;
+			}
+	 }
+
+	 @include e('hover'){
+		@include span(1);
+			background: #00468c;
+			height: 250px;
+			@include respond-to(sm){
+				
+		    	border: 1px solid rgba(0, 0, 0, 0.1);
+				display: inline-block;
+				height: auto;
+				max-width: 100%;
+				margin: 0;
+				position: relative;
+				width: 100%;
+			}
+
+	    img{
+	    	display: block;
+	    	width: 100%;
+	    }
+	}
+
+	@include e('legend'){
+		@extend %transitionAll;
+		    position: absolute;
+    
+    		top: 200px;
+    		left: 12px;
+		@include respond-to(sm){
+    		background-color: rgba(0,13,51,.9);
+		    bottom: 0;
+		    top: 0;
+		    left: 0;
+		    display: block;
+			height: 100%;
+		    opacity: 0;
+		    position: absolute;
+		    width: 100%;
+
+	    	&:hover{
+	    		opacity: 1;
+
+	    	}
+		}
+	}
+
+	@include e('border'){
+			border: 0 solid;
+
+			@include respond-to(sm){
+				@include beforesfourleft($brColor:  $blue4);
+					border-width: 2px 2px 2px 0;
+			    	border-style: solid;
+			    	border-color: $white;
+					display: block;
+					padding: 30px;
+					position: relative;
+					margin: 30% 7% 30% 0;
+
+				@include m('right'){
+
+					@include beforesfourright($brColor: $blue4);
+					border-width: 2px 0 2px 2px;
+					margin: 30% 0 30% 7%;
+				}
+			}
+	}
+
+	@include e('title'){
+		@include fonts(600,25);
+		margin: 0;
+		color: $white;
+		text-transform: uppercase;
+
+	}
+	@include e('subtitle'){
+		@include fonts(400,16);
+		margin: 0;
+		color: $white;
+
+	}
+
+	@include e('vermais'){
+		@include span(1);
+			text-align: center;
+
+			a{
+				@extend %borderradius;
+			}
+
+			@include m('servicos'){
+				@include span(1);				
+					float: right$i;
+					text-align: center$i;
+				
+				@include respond-to(md){
+					
+				}
+			}
+	}
+}

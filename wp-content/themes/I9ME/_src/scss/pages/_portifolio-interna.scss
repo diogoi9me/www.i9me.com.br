@@ -1,0 +1,7 @@
+.portifolio-interna{
+	margin: 90px 0 0;
+
+	@include e('vermais'){
+		margin: 60px 0;
+	}
+}

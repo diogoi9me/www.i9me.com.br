@@ -1,0 +1,80 @@
+.sobre{
+	@extend %boxFull;
+	@include span(1);
+		position: relative;
+		background: $blue2;
+	    height: 460px;
+
+		@include e('boxleft'){
+			@include span(1);
+					background: url(../images/bg-sobre-i9me.png);
+					
+					background-size: 100% 100%;
+   					background-repeat: no-repeat;
+   					position: relative;
+
+   					&:after{
+   					content: '';
+   					position: absolute;
+				    bottom: 171px;
+				    height: 31px;
+				    background: url(../images/after-video.png) no-repeat;
+				    width: 23px;
+				    right: -23px;
+   					}
+			@include respond-to(md){
+				@include span(.35);
+				height: 461px;
+				    //background-attachment: fixed;
+				    //background-repeat: no-repeat;
+				    //background-position: 0% 71%;
+			}
+		}
+
+		@include e('boxright'){
+			@include span(1);
+
+			@include respond-to(md){
+				@include span(.65);
+			}
+		}
+
+		@include e('border'){
+			border: 3px solid $white;
+		    border-radius: 60px;
+		    height: 100px;
+		    width: 100px;
+		    display: inline-block;
+		    padding: 21px 33px;
+    		font-size: 45px;
+		}
+		@include e('play'){
+			@include span(1);
+				background: $blue2;
+				text-align: center;
+				margin: 9% 0;
+
+				a{
+					color: $white;
+					display: inline-block;
+					margin: 6% 0 20%;
+    				@include respond-to(md){
+    					margin: 12% 0;
+    				}
+    				vertical-align: middle;
+    				@include fonts(700, 88);
+				}
+				span{
+					display: none;
+				}
+				@include respond-to(md){
+				span{
+					color: $white;
+					vertical-align: middle;
+					margin-left: 3%;
+					display: inline-block;
+					@include fonts(600, 30);
+				}
+				}
+		}
+}

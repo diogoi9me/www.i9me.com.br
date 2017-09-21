@@ -1,0 +1,190 @@
+.news-banner {
+    @extend %boxFull;
+    	margin: 35px 0 10px;
+    @include respond-to(md){
+   		margin: 88px 0;
+   	}
+}
+
+//NEWS
+.news {	
+	@include col(1);
+	@include respond-to(md){
+		@include col(.7);
+	}
+	
+    @include e('item'){
+		@include col(1);
+		    margin-right: 0%;
+    		border-bottom: 1px solid #ccc;
+    		margin-bottom: 2px;
+    		padding: 24px 0;
+    		@include fonts(300);
+
+		@include m('destaque'){
+			@include col(1);
+	 			margin:0;
+			    padding: 0;
+
+			@include respond-to(md){
+				@include col(.5);
+			}
+		}
+		
+    }
+
+    @include e('lista'){
+    	@include col(1);
+    	    margin:0px;
+		@include respond-to(md){
+			@include col(.5);
+			min-height: 450px;				
+		}
+    }
+
+    @include e('thumb'){
+		@include col(.2);
+
+		img {
+			max-width: 100%;
+			height: 75px;
+		}
+
+		@include m('destaque'){
+			@include col(1);
+			    
+			img {
+			max-width: 100%;
+			height: auto;
+			}
+		}
+    }
+	@include e('conteudo'){
+		display: inline-block;
+		padding: 40px 0;
+	}
+    @include e('info'){
+		@include col(.7);
+	
+		min-height: 60px;
+    }
+
+    @include e('data'){
+		@extend %boxFull;
+		font-size: 14px;
+		color: $gray2;
+		text-transform: uppercase;
+		@include fonts(700);
+		
+    }
+
+    @include e('title'){
+		@extend %boxFull;
+		font-size: 15px$i;
+		margin: 10px 0px;
+		line-height: 23px;
+		@include fonts(300);
+		@include m('header'){
+			margin: 0;
+			
+		}
+		@include m('big'){
+			font-size: 24px$i;
+			color: #4f4f4f;
+			@include fonts(600);
+			line-height: 29px;
+
+		}
+
+    }
+    @include e('subtitle'){
+    	margin-bottom: 21px;
+    	display: inline-block;
+    }
+    @include e('toptitle'){
+    	margin: 0;
+    	display: block;
+    }
+    @include e('desc'){
+    	
+    	font-size: 16px;
+   		display: inline-block;
+    	padding: 10px 6px;
+    }
+}
+
+
+//SERVIÇOS
+.servicos {
+	$self : &;
+
+	@include col(1);
+	background: #173e77;
+	margin-top: 22px;
+
+	@include respond-to(md){
+		@include col(.3);
+		    margin: 65px 0px;
+	}	
+
+	@include e('item'){
+		@include span(.33);
+		    margin: 15px 0px;
+
+		@include respond-to(sm){
+			@include col(1/3, $cycle: 3);
+			    margin: 23px 0px;
+		}
+		a{
+			 display: block;
+			 opacity: 0.3;
+			 @extend %transitionAll;
+			 &:hover {
+                    opacity: 1;
+
+                }
+		}
+	}
+
+	@include e('title'){
+		color: #fff;
+		font-size: 16px;
+		text-align: center;
+		margin: 30px 0px;
+		@include fonts(300, 16);
+		
+	}
+
+	@include e('lista'){
+		
+		border-top: 2px solid #3e6db3;
+	    display: inline-block;
+	    height: auto;
+	    padding: 5px 10px;
+		text-align: center;
+	    width: 100%;
+    	@include respond-to(sm){
+    		  padding: 32px 30px;
+    	}
+
+
+	}
+
+	@include e('titulo'){
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 12px;
+		margin:10px 0;
+	}
+
+	@include m('img'){
+		margin: 50px 0;
+	}
+} 
+
+
+
+
+
+
+
