@@ -97,79 +97,79 @@ function wpcf_meta_boxes($meta_boxes) {
 
 
 
- $meta_boxes[] = array(
-        'title'      => __( 'Serviços', 'serviços' ),
-        'post_types' =>  array (
-            'servico',),
-            // 'page', ),
-        'fields'     => array(
+ // $meta_boxes[] = array(
+ //        'title'      => __( 'Serviços', 'serviços' ),
+ //        'post_types' =>  array (
+ //            'servico',),
+ //            // 'page', ),
+ //        'fields'     => array(
   
-           array (
-         'id' => 'grupo_design',
-         'type' => 'group',
-         'name' => 'Grupo Design',
-         'fields' =>       array (
+ //           array (
+ //         'id' => 'grupo_design',
+ //         'type' => 'group',
+ //         'name' => 'Grupo Design',
+ //         'fields' =>       array (
              
-           array (
-             'id' => 'grupo_design_imagem',
-             'type' => 'image_advanced',
-             'name' => 'ícone',
-             'max_file_uploads' => 1,
-             'columns' => 4,
-           ),
+ //           array (
+ //             'id' => 'grupo_design_imagem',
+ //             'type' => 'image_advanced',
+ //             'name' => 'ícone',
+ //             'max_file_uploads' => 1,
+ //             'columns' => 4,
+ //           ),
              
-           array (
-             'id' => 'grupo_design_titulo',
-             'type' => 'text',
-             'name' => 'Título',
-             'columns' => 4,
-           ),
+ //           array (
+ //             'id' => 'grupo_design_titulo',
+ //             'type' => 'text',
+ //             'name' => 'Título',
+ //             'columns' => 4,
+ //           ),
              
-           array (
-             'id' => 'grupo_design_descricao',
-             'type' => 'textarea',
-             'name' => 'Descrição',
-             'columns' => 4,
-           ),
-         ),
-         'clone' => 1,
-         'sort_clone' => 1,
-         'tab' => 'tab_3',
-       ),
+ //           array (
+ //             'id' => 'grupo_design_descricao',
+ //             'type' => 'textarea',
+ //             'name' => 'Descrição',
+ //             'columns' => 4,
+ //           ),
+ //         ),
+ //         'clone' => 1,
+ //         'sort_clone' => 1,
+ //         'tab' => 'tab_3',
+ //       ),
          
-       array (
-         'id' => 'grupo_web',
-         'type' => 'group',
-         'name' => 'Grupo Web',
-         'fields' =>       array (
+ //       array (
+ //         'id' => 'grupo_web',
+ //         'type' => 'group',
+ //         'name' => 'Grupo Web',
+ //         'fields' =>       array (
              
-           array (
-             'id' => 'grupo_web_imagem',
-             'type' => 'image_advanced',
-             'name' => 'ícone',
-             'max_file_uploads' => 1,
-             'columns' => 4,
-           ),
+ //           array (
+ //             'id' => 'grupo_web_imagem',
+ //             'type' => 'image_advanced',
+ //             'name' => 'ícone',
+ //             'max_file_uploads' => 1,
+ //             'columns' => 4,
+ //           ),
              
-           array (
-             'id' => 'grupo_web_titulo',
-             'type' => 'text',
-             'name' => 'Título',
-             'columns' => 4,
-           ),
+ //           array (
+ //             'id' => 'grupo_web_titulo',
+ //             'type' => 'text',
+ //             'name' => 'Título',
+ //             'columns' => 4,
+ //           ),
              
-           array (
-             'id' => 'grupo_web_descricao',
-             'type' => 'textarea',
-             'name' => 'Descrição',
-             'columns' => 4,
-           ),
-         ),
-         'clone' => 1,
-         'sort_clone' => 1,
-         'tab' => 'tab_4',
-       ),
-     ),
+ //           array (
+ //             'id' => 'grupo_web_descricao',
+ //             'type' => 'textarea',
+ //             'name' => 'Descrição',
+ //             'columns' => 4,
+ //           ),
+ //         ),
+ //         'clone' => 1,
+ //         'sort_clone' => 1,
+ //         'tab' => 'tab_4',
+ //       ),
+ //     ),
 
 
 
@@ -177,7 +177,7 @@ function wpcf_meta_boxes($meta_boxes) {
 
 
         
-    );
+ //    );
 
 
 
