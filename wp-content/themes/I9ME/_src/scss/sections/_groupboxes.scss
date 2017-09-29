@@ -17,6 +17,13 @@
 				display: inline-block;
 				width: 49.99%$i;
 			}
+
+		&:hover{
+			-webkit-transition:background 0.5s ease-out;
+       -moz-transition:background 0.5s ease-out;
+       -o-transition:background 0.5s ease-out;
+       -ms-transition:background 0.5s ease-out;
+		}
 	 }
 
 	 @include e('hover'){

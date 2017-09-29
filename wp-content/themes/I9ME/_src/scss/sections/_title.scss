@@ -235,20 +235,24 @@
 		color: $blue2;
 	}
 	.header__menu{
-		transform: translateY(-55%) translateX(-50%);
+		//transform: translateY(-55%) translateX(-50%);
 	}
 	@include respond-to(md){
 		.header__menu ul{
-			padding: 8% 0 6%;
+			//padding: 8% 0 6%;
     		margin: 0;
 		}
+	}
+	.header__menu{
+		top: 40px;
+		transition: all .3s;
 	}
 	.header__menu ul a{
 		color: $blue2$i;
 		height: 100px;
 	}
 	.header__redes{
-		top: 26px;
+		top: 6px;
 	}
 	.header__redes i{
 		background: $blue2;
