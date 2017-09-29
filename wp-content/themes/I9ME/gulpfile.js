@@ -9,7 +9,7 @@ var gulp, path, sass, cssnano, sourcemaps, concat, uglify, browserSync, browsers
 path = {
     dev     : './_src',
     prod    : './assets',
-    proxy   : 'http://projetos.homolog'
+    proxy   : 'http://localhost/homolog/'
 }
 
 //Carregamento de modulos

@@ -118,3 +118,28 @@ function custom_tema_mailchimp( $wp_customize ) {
 define('MAILCHIMP_URL', trailingslashit( get_stylesheet_directory_uri() . '/_lib'));
 define('MAILCHIMP_DIR', trailingslashit( STYLESHEETPATH . '/_lib'));
 require_once MAILCHIMP_DIR . 'mailchimp.php';
+
+
+// paginacao single
+
+
+
+//prev
+add_filter('previous_post_link', 'post_link_previous');
+
+function post_link_previous($output) {
+    $code = 'class="controls__left"';
+    return str_replace('<a href=', '<a '.$code.' href=', $output);
+}
+
+//next
+
+add_filter('next_post_link', 'post_link_next');
+
+function post_link_next($output) {
+    $code = 'class="controls__right"';
+    return str_replace('<a href=', '<a '.$code.' href=', $output);
+}
+
+// Remove p tags from category description
+remove_filter('term_description','wpautop');

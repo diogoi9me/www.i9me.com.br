@@ -1,4 +1,3 @@
-<?php /* Template Name: SERVIÇOS */?>
 <?php get_template_part('templates/html','header');?>
 <?php get_template_part('templates/video','topo'); ?>
 

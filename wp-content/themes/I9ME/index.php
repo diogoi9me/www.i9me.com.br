@@ -2,7 +2,7 @@
 
 <?php get_template_part('templates/video','topo'); ?>
 
-<?php get_template_part('templates/portifolio','home');?>
+<?php get_template_part('templates/portfolio','home');?>
 
 <?php get_template_part('templates/servicos','home');?>
 

@@ -3,17 +3,20 @@
  <!-- Header zone -->
 <header class="header">
     <div class="container">
-
         <div class="header__brand">
-            <h1 class="header__logo">
-                <span class="header__letter header--i">I</span>
-                <span class="header__letter header--n">9</span>
-                <span class="header__letter header--m">M</span>
-                <span class="header__letter header--e">E</span>
-            </h1>
-            <div class="header__name">
-                <span class="header__wd">Web & Design</span>
-            </div>
+            <a href="<?php echo home_url(); ?>">            
+                <h1 class="header__logo">
+                
+                    <span class="header__letter header--i">I</span>
+                    <span class="header__letter header--n">9</span>
+                    <span class="header__letter header--m">M</span>
+                    <span class="header__letter header--e">E</span>
+                
+                </h1>           
+                <div class="header__name">
+                    <span class="header__wd">Web & Design</span>
+                </div>
+            </a>
         </div>
 
 
